@@ -1,0 +1,66 @@
+.modules {
+  margin-top: 18px;
+}
+
+.module {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 21px;
+}
+
+.module:last-child {
+  margin-bottom: 0;
+}
+
+.icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin-top: 5px;
+  border-radius: 20px;
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+.moduleTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--color-text);
+}
+
+.progress {
+  position: relative;
+  height: 115px;
+  margin-top: 21px;
+}
+
+.progressLabel {
+  position: absolute;
+  left: 15px;
+  top: 16px;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-ink);
+}
+
+.progressValue {
+  position: absolute;
+  left: 15px;
+  top: 40px;
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  color: var(--color-text);
+}
+
+.progressBar {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  top: 90px;
+}

@@ -1,0 +1,51 @@
+.hero {
+  height: 360px;
+}
+
+.title {
+  margin-top: 43px;
+  white-space: nowrap;
+}
+
+.search {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 33px;
+}
+
+.scope {
+  gap: 10px;
+}
+
+.main {
+  position: relative;
+  left: 1px; /* the search frame is drawn 1px to the right of the others */
+  padding-top: 72px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 16px;
+  margin-top: 32px;
+}
+
+.results {
+  margin-top: 77px;
+}
+
+.pagination {
+  margin-top: 73px;
+  padding-bottom: 72px;
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 26px;
+    line-height: 32px;
+    white-space: normal;
+  }
+}

@@ -1,0 +1,47 @@
+.card {
+  padding: 38px 39px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  height: 52px;
+  margin-bottom: 24px;
+}
+
+.author {
+  display: block;
+  margin-top: -1px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--color-text);
+}
+
+.role {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--color-text-soft);
+}
+
+.posted {
+  margin-left: auto;
+  font-size: 16px;
+  color: var(--color-text-soft);
+}
+
+.stars {
+  display: flex;
+  height: 24px;
+}
+
+.card .text {
+  margin-top: 24px;
+}
+
+/* The first review in the design is set with a 24px line height, the others with 26px. */
+.card.tight .text {
+  line-height: 24px;
+}

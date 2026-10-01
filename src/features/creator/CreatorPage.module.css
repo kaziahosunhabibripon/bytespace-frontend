@@ -1,0 +1,125 @@
+.hero {
+  height: 592px;
+}
+
+.head {
+  position: relative;
+  height: 472px;
+}
+
+.avatar,
+.name,
+.bio,
+.stats {
+  position: absolute;
+}
+
+.avatar {
+  left: 2px;
+  top: 52px;
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.name {
+  left: 122px;
+  top: 0;
+  width: 700px;
+  height: 200px;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 59px;
+  white-space: nowrap;
+}
+
+.badge {
+  position: absolute;
+  left: 303px;
+  top: 60px;
+  display: inline-flex;
+  align-items: center;
+  height: 35px;
+  padding: 0 24px;
+  border-radius: var(--radius-pill);
+  background: var(--color-lime);
+  color: var(--color-ink);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.headline {
+  position: absolute;
+  left: 0;
+  top: 112px;
+}
+
+.bio {
+  left: 2px;
+  top: 188px;
+  width: 1200px;
+  max-width: 100%;
+}
+
+.stats {
+  left: 2px;
+  right: 0;
+  top: 344px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.number {
+  font-weight: 400;
+  color: var(--color-blue);
+}
+
+.follow {
+  margin-left: auto;
+}
+
+.main {
+  position: relative;
+  left: -1px; /* the creator frame's list is drawn 1px to the left */
+  padding: 62px 0;
+}
+
+.courses {
+  margin-top: 40px;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .head {
+    height: auto;
+  }
+
+  .avatar,
+  .name,
+  .bio,
+  .stats {
+    position: static;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .title,
+  .badge,
+  .headline {
+    position: static;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+  }
+}

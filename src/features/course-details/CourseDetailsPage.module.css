@@ -1,0 +1,45 @@
+.page {
+  position: relative;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 957px;
+}
+
+.layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 725px minmax(0, 412px);
+  grid-template-rows: 296px auto;
+  align-items: start;
+  column-gap: 63px;
+}
+
+.headPlaceholder {
+  grid-column: 1 / -1;
+  height: 296px;
+}
+
+.main {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+}
+
+/* Padding rather than margin: the poster's bottom margin would swallow it (margin collapsing). */
+.tabsShifted {
+  padding-top: 17px;
+}
+
+@media (max-width: 980px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .main {
+    grid-row: auto;
+  }
+}
