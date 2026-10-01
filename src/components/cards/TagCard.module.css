@@ -1,0 +1,20 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 208px;
+  height: 70px;
+  padding: 19px 16px 0;
+  color: var(--color-ink);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.meta {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-subtle);
+}

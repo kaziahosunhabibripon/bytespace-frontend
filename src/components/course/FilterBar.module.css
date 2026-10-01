@@ -1,0 +1,17 @@
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+}
+
+.bar .control {
+  --button-padding: 16px;
+  --button-font-size: 16px;
+}

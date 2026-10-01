@@ -1,0 +1,50 @@
+.card {
+  position: relative;
+  width: 232px;
+  height: 131px;
+  color: var(--color-ink);
+}
+
+.title,
+.value,
+.bar {
+  position: absolute;
+  left: 16px;
+}
+
+.title {
+  top: 17px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.value {
+  top: 42px;
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 56px;
+  color: var(--color-text);
+}
+
+.bar {
+  top: 107px;
+  width: 200px;
+}
+
+.card.roomy {
+  height: 137px;
+}
+
+.roomy .title {
+  top: 20px;
+}
+
+.roomy .value {
+  top: 49px;
+}
+
+.roomy .bar {
+  top: 114px;
+}

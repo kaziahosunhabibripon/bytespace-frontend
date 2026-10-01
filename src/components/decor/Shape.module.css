@@ -1,0 +1,6 @@
+.shape {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}

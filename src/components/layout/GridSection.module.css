@@ -1,0 +1,14 @@
+.grid {
+  --s: 1;
+  background-color: var(--color-blue);
+  background-image:
+    linear-gradient(90deg, var(--color-blue-grid) 0 calc(2px * var(--s)), transparent calc(2px * var(--s))),
+    linear-gradient(
+      180deg,
+      transparent 0 calc(118px * var(--s)),
+      var(--color-blue-grid) calc(118px * var(--s)) calc(120px * var(--s))
+    );
+  background-size: calc(120px * var(--s)) calc(120px * var(--s));
+  background-position: calc(50% + 60px * var(--s)) 0;
+  color: #fff;
+}

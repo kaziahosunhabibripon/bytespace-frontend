@@ -1,0 +1,40 @@
+.card {
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: var(--color-blue);
+  color: #fff;
+}
+
+.title {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.period {
+  display: block;
+  font-size: 10px;
+  line-height: 12px;
+  opacity: 0.8;
+}
+
+.amount {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 0 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-lime);
+  color: var(--color-ink);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 20px;
+}
