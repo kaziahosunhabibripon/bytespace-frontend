@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  flex: none;
+  color: var(--color-blue);
+}
+
+.sm .item {
+  height: 38px;
+  color: var(--color-text-soft);
+  font-size: 16px;
+}
+
+.md .item {
+  height: 40px;
+  color: var(--color-ink);
+  font-size: 18px;
+}

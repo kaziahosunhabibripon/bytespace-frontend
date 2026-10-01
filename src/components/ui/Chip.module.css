@@ -1,0 +1,29 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.filled {
+  height: 43px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-muted);
+  color: var(--color-text-soft);
+}
+
+.filled.selected {
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+.text {
+  padding: 0 4px;
+  border: 0;
+  background: none;
+  color: var(--color-blue);
+}

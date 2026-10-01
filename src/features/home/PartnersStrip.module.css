@@ -1,0 +1,12 @@
+.strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 202px;
+  background: var(--color-surface-muted);
+  overflow: hidden;
+}
+
+.strip img {
+  max-width: none;
+}

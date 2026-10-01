@@ -1,0 +1,10 @@
+.text {
+  left: 50%;
+  width: 962px;
+  margin-left: -481px;
+}
+
+.action {
+  left: 50%;
+  transform: translateX(-50%);
+}

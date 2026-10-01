@@ -1,0 +1,45 @@
+/* Design tokens extracted from the ByteSpace Figma file. */
+:root {
+  /* Brand */
+  --color-blue: #003be2;
+  --color-blue-grid: #1f53e5;
+  --color-lime: #d4fb20;
+  --color-lime-vivid: #cbfc01;
+
+  /* Text */
+  --color-ink: #040819;
+  --color-text: #242528;
+  --color-text-soft: #4b4c53;
+  --color-text-neutral: #4f4f4f;
+  --color-text-subtle: #82868e;
+  --color-text-inverse: #f5f5f6;
+
+  /* Surfaces & lines */
+  --color-surface: #ffffff;
+  --color-surface-alt: #fafafa;
+  --color-surface-muted: #f5f5f6;
+  --color-border: #ced0d3;
+  --color-divider: #d1d1d1;
+  --color-track: #e8e8e8;
+  --color-star-muted: #c3c3c3;
+
+  /* Typography */
+  --font-body: "Satoshi", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: "Poppins", "Satoshi", system-ui, sans-serif;
+
+  /* Radii */
+  --radius-pill: 999px;
+  --radius-xl: 40px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+
+  /* Effects: the soft shadow the design puts under every cut-out photo */
+  --shadow-photo: drop-shadow(50px 38px 70px rgba(0, 0, 0, 0.45));
+
+  /* Layout */
+  --container-width: 1200px;
+  --container-gutter: 48px;
+  --nav-height: 120px;
+  --design-width: 1440px;
+}

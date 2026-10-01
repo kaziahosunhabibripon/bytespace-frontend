@@ -1,0 +1,49 @@
+.base {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.hero {
+  font-size: 72px;
+  line-height: 86px;
+}
+
+.display {
+  font-size: 44px;
+  line-height: 53px;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 43px;
+}
+
+.heading {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.ink {
+  color: var(--color-ink);
+}
+
+.text {
+  color: var(--color-text);
+}
+
+.white {
+  color: #fff;
+}
+
+.black {
+  color: #000;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.center {
+  text-align: center;
+}

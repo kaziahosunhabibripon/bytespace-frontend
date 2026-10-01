@@ -1,0 +1,47 @@
+.lg {
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.md {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.sm {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.xs {
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.inherit {
+  color: inherit;
+}
+
+.soft {
+  color: var(--color-text-soft);
+}
+
+.neutral {
+  color: var(--color-text-neutral);
+}
+
+.subtle {
+  color: var(--color-text-subtle);
+}
+
+.white {
+  color: #fff;
+}
+
+.ink {
+  color: var(--color-ink);
+}
+
+.center {
+  text-align: center;
+}

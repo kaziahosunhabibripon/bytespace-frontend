@@ -1,0 +1,45 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 41px 40px;
+  text-align: left;
+}
+
+.skeleton {
+  height: 383px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(100deg, #f1f1f2 30%, #f8f8f9 50%, #f1f1f2 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+.empty {
+  padding: 80px 0;
+  text-align: center;
+  color: var(--color-text-subtle);
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* Figma rounds the three 373.33px columns to 373 / 373 / 374, so cards land on whole pixels. */
+@media (min-width: 1248px) {
+  .grid {
+    grid-template-columns: 373px 373px 374px;
+  }
+}
+
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,21 @@
+.listHeading {
+  margin-top: 22px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 29px;
+}
+
+.empty {
+  margin-top: 29px;
+}

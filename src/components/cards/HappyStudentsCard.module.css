@@ -1,0 +1,63 @@
+.card {
+  position: relative;
+  width: 258px;
+  height: 121px;
+  padding: 17px 16px 16px;
+  color: var(--color-ink);
+}
+
+.lime {
+  background: var(--color-lime);
+}
+
+.title {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.rating strong {
+  font-weight: 500;
+}
+
+.rating em {
+  font-style: normal;
+  color: var(--color-text-subtle);
+}
+
+.rating svg {
+  color: var(--color-lime);
+}
+
+.lime .rating svg {
+  color: var(--color-blue);
+}
+
+.avatars {
+  position: absolute;
+  left: 16px;
+  top: 63px;
+}
+
+.card.roomy {
+  height: 123px;
+  padding-top: 19px;
+}
+
+.roomy .rating {
+  margin-top: 4px;
+}
+
+.roomy .avatars {
+  top: 65px;
+}

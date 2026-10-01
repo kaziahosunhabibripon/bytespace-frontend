@@ -1,0 +1,23 @@
+.surface {
+  background: var(--color-surface);
+}
+
+.outlined {
+  border: 1px solid var(--color-border);
+}
+
+.plain {
+  border: 0;
+}
+
+.md {
+  border-radius: var(--radius-md);
+}
+
+.lg {
+  border-radius: var(--radius-lg);
+}
+
+.xl {
+  border-radius: var(--radius-xl);
+}

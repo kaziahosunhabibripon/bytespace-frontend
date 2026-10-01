@@ -1,0 +1,20 @@
+/* Shared vertical rhythm for the About / Lessons / Reviews tab panels. */
+.panel {
+  margin-top: 37px;
+}
+
+.heading {
+  margin-top: 21px;
+}
+
+.panel > .heading:first-child {
+  margin-top: 0;
+}
+
+.copy {
+  margin-top: 21px;
+}
+
+.copy + .copy {
+  margin-top: 26px;
+}
