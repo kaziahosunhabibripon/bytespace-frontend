@@ -1,0 +1,22 @@
+.header {
+  position: relative;
+}
+
+.lead {
+  max-width: 920px;
+  margin: 15px auto 0;
+}
+
+.title .lead {
+  margin-top: 16px;
+}
+
+/* Optical nudges taken from the Figma frames (visual only, layout heights stay the same). */
+.display > h2 {
+  position: relative;
+  top: -1px;
+}
+
+.title {
+  top: 1px;
+}

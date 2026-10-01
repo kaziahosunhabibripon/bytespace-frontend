@@ -1,0 +1,11 @@
+.wrap {
+  --s: 1;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.stage {
+  position: relative;
+  transform-origin: top left;
+}

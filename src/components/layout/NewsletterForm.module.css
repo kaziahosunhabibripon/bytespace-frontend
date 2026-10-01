@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.form .input {
+  width: 376px;
+  max-width: 100%;
+}
+
+.note {
+  width: 480px;
+  max-width: 100%;
+  margin-top: 24px;
+  font-size: 12px;
+  line-height: 19px;
+  color: var(--color-text);
+}

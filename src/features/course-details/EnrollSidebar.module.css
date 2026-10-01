@@ -1,0 +1,110 @@
+.sidebar {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 36px 39px 38px;
+}
+
+.sidebar .title {
+  letter-spacing: -0.02em;
+}
+
+.lessons {
+  margin-top: 22px;
+}
+
+.lessons li {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  height: 50px;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--color-text);
+}
+
+.lessonTitle {
+  max-width: 190px;
+}
+
+.duration {
+  padding: 0 8px 0 12px;
+  color: var(--color-blue);
+}
+
+.pitch {
+  margin-top: 24px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  height: 43px;
+  margin-top: 21px;
+}
+
+.price b {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 43px;
+  letter-spacing: -0.01em;
+  color: var(--color-blue);
+}
+
+.price span {
+  font-size: 16px;
+  color: var(--color-text-soft);
+}
+
+.enroll {
+  margin-top: 21px;
+}
+
+.includesHeading {
+  margin-top: 21px;
+}
+
+.includes {
+  margin-top: 15px;
+}
+
+.divider {
+  height: 1px;
+  margin: 17px 0 24px;
+  border: 0;
+  background: var(--color-divider);
+}
+
+.creator {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.creatorName {
+  display: block;
+  margin-top: -1px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--color-text);
+}
+
+.creatorRole {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--color-text-soft);
+}
+
+.profile {
+  margin-top: 24px;
+}
+
+@media (max-width: 980px) {
+  .sidebar {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: 32px;
+  }
+}

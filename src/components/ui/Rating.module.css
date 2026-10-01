@@ -1,0 +1,22 @@
+.value {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding-right: 4px;
+  color: var(--color-text-soft);
+  font-size: 18px;
+}
+
+.muted svg {
+  color: var(--color-star-muted);
+}
+
+.accent svg {
+  color: var(--color-lime);
+}
+
+.stars {
+  display: inline-flex;
+  gap: 6px;
+  color: var(--color-text-soft);
+}
