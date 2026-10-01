@@ -16,9 +16,13 @@ export interface Course {
   categories: readonly string[];
 }
 
+export type CourseSort = "relevant" | "rating" | "price-low" | "price-high";
+
 export interface CourseQuery {
   text?: string;
   category?: string;
+  level?: CourseLevel;
+  sort?: CourseSort;
   page?: number;
   pageSize?: number;
 }

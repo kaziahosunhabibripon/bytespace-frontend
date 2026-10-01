@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { creators, creatorLabels } from "@/data/creator";
 import { useCreatorCourses } from "@/hooks/useCourses";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { imageUrl } from "@/lib/assets";
+import type { CourseLevel, CourseSort } from "@/types/course";
 import { CourseList } from "@/components/course/CourseList";
 import { FilterBar } from "@/components/course/FilterBar";
 import { Container } from "@/components/layout/Container";
@@ -19,7 +21,12 @@ const COURSES_SHOWN = 6;
 export default function CreatorPage() {
   const { id } = useParams();
   const creator = creators.find((candidate) => String(candidate.id) === id);
-  const { data: courses } = useCreatorCourses(creator?.id ?? 0, COURSES_SHOWN);
+  const [level, setLevel] = useState<CourseLevel | "all">("all");
+  const [sort, setSort] = useState<CourseSort>("relevant");
+  const { data: courses } = useCreatorCourses(creator?.id ?? 0, COURSES_SHOWN, {
+    level: level === "all" ? undefined : level,
+    sort,
+  });
 
   useDocumentTitle(creator?.name);
 
@@ -59,7 +66,13 @@ export default function CreatorPage() {
       </PageHero>
 
       <Container as="main" id="main" className={styles.main}>
-        <FilterBar />
+        <FilterBar
+          level={level}
+          onLevelChange={setLevel}
+          sort={sort}
+          onSortChange={setSort}
+          onReset={() => setLevel("all")}
+        />
         <div className={styles.courses}>
           <CourseList
             courses={courses}

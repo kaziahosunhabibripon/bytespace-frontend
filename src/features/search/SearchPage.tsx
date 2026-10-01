@@ -1,7 +1,9 @@
+import { useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import { DEFAULT_CATEGORY, searchCategories } from "@/data/taxonomy";
+import { DEFAULT_CATEGORY, levelOptions, searchCategories, sortOptions } from "@/data/taxonomy";
 import { useCourseSearch } from "@/hooks/useCourses";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import type { CourseLevel, CourseSort } from "@/types/course";
 import { CourseList } from "@/components/course/CourseList";
 import { FilterBar } from "@/components/course/FilterBar";
 import { Container } from "@/components/layout/Container";
@@ -14,7 +16,10 @@ import { Pagination } from "@/components/ui/Pagination";
 import { SearchField } from "@/components/ui/SearchField";
 import styles from "./SearchPage.module.css";
 
-const PARAM = { text: "q", category: "category", page: "page" } as const;
+const PARAM = { text: "q", category: "category", level: "level", sort: "sort", page: "page" } as const;
+
+const isLevel = (value: string): value is CourseLevel => levelOptions.some((option) => option.value === value);
+const isSort = (value: string): value is CourseSort => sortOptions.some((option) => option.value === value);
 
 export default function SearchPage() {
   useDocumentTitle("Courses");
@@ -22,9 +27,14 @@ export default function SearchPage() {
 
   const text = params.get(PARAM.text) ?? "";
   const category = params.get(PARAM.category) ?? DEFAULT_CATEGORY;
+  const levelParam = params.get(PARAM.level);
+  const level: CourseLevel | "all" = levelParam && isLevel(levelParam) ? levelParam : "all";
+  const sortParam = params.get(PARAM.sort);
+  const sort: CourseSort = sortParam && isSort(sortParam) ? sortParam : "relevant";
   const page = Math.max(1, Number(params.get(PARAM.page)) || 1);
 
-  const { data } = useCourseSearch({ text, category, page });
+  const { data } = useCourseSearch({ text, category, level: level === "all" ? undefined : level, sort, page });
+  const chipsRef = useRef<HTMLDivElement>(null);
 
   /** Writes filters to the URL so results are shareable; changing a filter goes back to page 1. */
   const update = (changes: Partial<Record<(typeof PARAM)[keyof typeof PARAM], string | undefined>>) => {
@@ -55,8 +65,15 @@ export default function SearchPage() {
       </PageHero>
 
       <Container as="main" id="main" className={styles.main}>
-        <FilterBar />
-        <div className={styles.chips}>
+        <FilterBar
+          level={level}
+          onLevelChange={(next) => update({ [PARAM.level]: next === "all" ? undefined : next })}
+          sort={sort}
+          onSortChange={(next) => update({ [PARAM.sort]: next === "relevant" ? undefined : next })}
+          onReset={() => update({ [PARAM.text]: undefined, [PARAM.category]: undefined, [PARAM.level]: undefined })}
+          onCategoryClick={() => chipsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
+        />
+        <div className={styles.chips} ref={chipsRef}>
           {searchCategories.map((label) => (
             <Chip
               key={label}
@@ -69,7 +86,11 @@ export default function SearchPage() {
         </div>
 
         <div className={styles.results}>
-          <CourseList courses={data?.items} emptyMessage="No courses match your search." skeletonCount={18} />
+          <CourseList
+            courses={data?.items}
+            emptyMessage="No courses match your search. Try clearing the filters."
+            skeletonCount={18}
+          />
         </div>
 
         {data && data.pageCount > 1 ? (

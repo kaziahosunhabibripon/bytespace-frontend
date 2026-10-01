@@ -1,4 +1,5 @@
 import type { LearningPath } from "@/types/content";
+import type { CourseLevel, CourseSort } from "@/types/course";
 import type { IconName } from "@/types/icon";
 
 interface FilterControl {
@@ -16,6 +17,21 @@ export const filterBarConfig: { filters: readonly FilterControl[]; sort: FilterC
   ],
   sort: { label: "Most relevant", icon: "sort", iconSize: 22 },
 };
+
+/** Options behind the Level / Category / sort triggers above course lists. */
+export const levelOptions = [
+  { value: "all", label: "All levels" },
+  { value: "Beginner", label: "Beginner" },
+  { value: "Intermediate", label: "Intermediate" },
+  { value: "Advanced", label: "Advanced" },
+] as const satisfies readonly { value: CourseLevel | "all"; label: string }[];
+
+export const sortOptions = [
+  { value: "relevant", label: "Most relevant" },
+  { value: "rating", label: "Highest rated" },
+  { value: "price-low", label: "Price: low to high" },
+  { value: "price-high", label: "Price: high to low" },
+] as const satisfies readonly { value: CourseSort; label: string }[];
 
 /** Category chips on the home page, one array per visual row. */
 export const homeCategoryRows: readonly (readonly string[])[] = [
@@ -44,6 +60,8 @@ export const searchCategories: readonly string[] = [
   "UI/UX Design",
   "Creative Marketing",
   "Cooking",
+  "Photography",
+  "Web Development",
 ];
 
 export const DEFAULT_CATEGORY = "Featured";
