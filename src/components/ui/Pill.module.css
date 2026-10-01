@@ -1,0 +1,43 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.muted {
+  background: var(--color-surface-muted);
+  color: var(--color-text-soft);
+}
+
+.white {
+  background: #fff;
+  color: var(--color-text);
+}
+
+.white svg {
+  color: var(--color-blue);
+}
+
+.sm {
+  gap: 8px;
+  height: 32px;
+  padding: 0 11px 0 14px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.md {
+  gap: 10px;
+  height: 40px;
+  padding: 0 25px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.lg {
+  gap: 8px;
+  height: 46px;
+  padding: 0 24px;
+  font-size: 18px;
+}

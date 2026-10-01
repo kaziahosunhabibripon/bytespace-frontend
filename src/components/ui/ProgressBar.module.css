@@ -1,0 +1,37 @@
+.track {
+  height: var(--bar-height);
+  border-radius: calc(var(--bar-height) / 2);
+  background: var(--bar-track);
+  overflow: hidden;
+}
+
+.fill {
+  width: var(--value);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-lime);
+}
+
+.default {
+  --bar-track: var(--color-track);
+}
+
+.soft {
+  --bar-track: #f1f1f1;
+}
+
+.panel {
+  --bar-track: #e5e5e5;
+}
+
+.onBlue {
+  --bar-track: #fff;
+}
+
+.sm {
+  --bar-height: 6px;
+}
+
+.md {
+  --bar-height: 8px;
+}

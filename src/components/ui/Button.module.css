@@ -1,0 +1,65 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: var(--button-height, 46px);
+  padding: 0 var(--button-padding, 24px);
+  border: 0;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--button-font-size, 18px);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-ink);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lime {
+  background: var(--color-lime);
+}
+
+.lime:hover:not(:disabled) {
+  filter: brightness(0.96);
+}
+
+.outline {
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text);
+}
+
+.outline:hover:not(:disabled) {
+  border-color: var(--color-text);
+}
+
+.xs {
+  --button-height: 35px;
+  --button-padding: 15px;
+  --button-font-size: 16px;
+}
+
+.sm {
+  --button-height: 40px;
+  --button-font-size: 16px;
+}
+
+.md {
+  --button-height: 46px;
+}
+
+.lg {
+  --button-height: 48px;
+  --button-padding: 28px;
+}
+
+.full {
+  display: flex;
+  width: 100%;
+}
